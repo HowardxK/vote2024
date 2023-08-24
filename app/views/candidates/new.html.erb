@@ -1,0 +1,23 @@
+<%= flash[:notice] %>
+
+<h1>新增候選人</h1>
+
+<%= form_for(@candidate) do |form| %>
+  <div>
+    <%= form.label :name, "名字" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :party, "政黨" %>
+    <%= form.text_field :party %>
+  </div>
+  <div>
+    <%= form.label :age, "年齡" %>
+    <%= form.text_field :age %>
+  </div>
+  <div>
+    <%= form.label :politics, "政見" %>
+    <%= form.text_area :politics %>
+  </div>
+  <%= form.submit "新增候選人" %>
+<% end %>
